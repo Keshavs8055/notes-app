@@ -3,13 +3,25 @@ import "firebase/auth";
 import "firebase/firestore";
 import { store } from "./redux/store";
 import { setMainNoteData } from "./redux/userNotes/userNotes.action";
+
+console.log(process.env);
+
+const {
+  REACT_APP_APIKEY,
+  REACT_APP_AUTHDOMAIN,
+  REACT_APP_PROJECTID,
+  REACT_APP_STORAGEBUCKET,
+  REACT_APP_MESSAGINGSENDERID,
+  REACT_APP_APPID,
+} = process.env;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBMbrvFcajGiudW2XE1hpDZYLli8Z9-GQc",
-  authDomain: "notes-47fdc.firebaseapp.com",
-  projectId: "notes-47fdc",
-  storageBucket: "notes-47fdc.appspot.com",
-  messagingSenderId: "929112949605",
-  appId: "1:929112949605:web:d392c6411f71699bba178c",
+  apiKey: REACT_APP_APIKEY,
+  authDomain: REACT_APP_AUTHDOMAIN,
+  projectId: REACT_APP_PROJECTID,
+  storageBucket: REACT_APP_STORAGEBUCKET,
+  messagingSenderId: REACT_APP_MESSAGINGSENDERID,
+  appId: REACT_APP_APPID,
 };
 
 export const firebase = app.initializeApp(firebaseConfig);

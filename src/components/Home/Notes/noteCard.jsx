@@ -20,6 +20,7 @@ const NoteCard = (props) => {
   const [loading, toggleLoading] = React.useState(false);
   const handleClick = () => {
     toggleLoading(true);
+    // eslint-disable-next-line no-restricted-globals
     const ask = confirm(
       "Nothing Can be done after deleting this note, Cause i was too lazy to create a recycle bin"
     );
