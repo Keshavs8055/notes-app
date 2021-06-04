@@ -6,7 +6,10 @@ const handleClick = (setLoading) => {
   setLoading(true);
   googleSignIn()
     .then((res) => console.log(res))
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      alert(e.message);
+      console.log(e);
+    });
 };
 
 export const Login = () => {

@@ -25,7 +25,6 @@ const NoteCard = (props) => {
       "Nothing Can be done after deleting this note, Cause i was too lazy to create a recycle bin"
     );
     if (ask) {
-      console.log(ask);
       firestore
         .collection("users")
         .doc(props.user.uid)

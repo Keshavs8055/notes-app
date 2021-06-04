@@ -4,8 +4,6 @@ import "firebase/firestore";
 import { store } from "./redux/store";
 import { setMainNoteData } from "./redux/userNotes/userNotes.action";
 
-console.log(process.env);
-
 const {
   REACT_APP_APIKEY,
   REACT_APP_AUTHDOMAIN,

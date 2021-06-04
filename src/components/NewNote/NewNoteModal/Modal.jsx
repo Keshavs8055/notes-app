@@ -45,7 +45,6 @@ class NoteModal extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.note.length < 1) {
-      console.log("IN IF STTS");
       this.setState({
         error: {
           exist: true,
